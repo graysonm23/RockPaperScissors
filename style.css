@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #25272e;
+}
+
+header {
+  text-align: center;
+  font-size: 36px;
+  padding: 20px;
+  background-color: white;
+  transition: 0.5s ease 0.5s;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.score {
+  margin: 20px auto;
+  border: 3px solid white;
+  width: 200px;
+  border-radius: 4px;
+  color: white;
+  font-size: 46px;
+  text-align: center;
+  padding: 15px 20px;
+  position: relative;
+  transition: 2s;
+}
+
+.badge {
+  background-color: #e2584d;
+  color: white;
+  font-size: 14px;
+  padding: 2px 10px;
+}
+
+#usertag {
+  position: absolute;
+  top: 30px;
+  left: -25px;
+}
+
+#computertag {
+  position: absolute;
+  top: 30px;
+  right: -25px;
+}
+
+.result {
+  font-size: 40px;
+  color: white;
+  transition: 2s;
+}
+
+.result p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.choice {
+  display: inline-block;
+  border: 4px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0px 15px;
+}
+
+.choices {
+  text-align: center;
+  margin-top: 50px;
+  transition: 2s;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: red;
+  transition: all 0.4s ease;
+}
+
+#action-message {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+  transition: 2s;
+}
+
+#restart {
+  height: 125px;
+  width: 125px;
+}
+
+button {
+  position: absolute;
+  background-color: #25272e;
+  border: 4px solid white;
+  display: inline-block;
+  left: 40%;
+  margin: 40px 0px;
+  border-radius: 50%;
+}
+
+#stupidbutton {
+  transition: 2s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  transition: 0.4s ease;
+}
+
+button:focus {
+  outline-style: none;
+}
+
+.intro {
+  color: white;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  transition: 0.5s ease 0.5s;
+}
+
+.intro h1 {
+  font-size: 50px;
+}
+
+.intro button {
+  font-size: 30px;
+  width: 150px;
+  height: 150px;
+}
+
+.introductionbtns {
+}
+
+#introbutton {
+  position: absolute;
+  left: 30%;
+  top: 60%;
+}
+#meetdev {
+  position: absolute;
+  left: 60%;
+  top: 60%;
+}
+
+.introductionbtns:hover {
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.4s ease;
+}
+
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.match {
+  opacity: 0;
+  pointer-events: none;
+  transition: 1s ease 1s;
+}
