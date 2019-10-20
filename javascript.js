@@ -1,16 +1,16 @@
 let userScore = 0;
 let computerScore = 0;
-let userScore_span = document.getElementById("user-score");
-let computerScore_span = document.getElementById("computer-score");
-let scoreBoard_div = document.querySelector(".scoreboard");
-let result_p = document.querySelector(".result > p");
-let rock_div = document.getElementById("r");
-let scissors_div = document.getElementById("s");
-let paper_div = document.getElementById("p");
-let restart_button = document.getElementById("restart");
-let playGameButton = document.querySelector("#introbutton");
-let introScreen = document.querySelector(".intro");
-let match = document.querySelector(".match");
+let userScore_span = $("#user-score");
+let computerScore_span = $("#computer-score");
+let scoreBoard_div = $(".scoreboard");
+let result_p = $(".result > p");
+let rock_div = $("#r");
+let scissors_div = $("#s");
+let paper_div = $("#p");
+let restart_button = $("#restart");
+let playGameButton = $("#introbutton");
+let introScreen = $(".intro");
+let match = $(".match");
 // let scoreBoardfade = document.getElementById("scoreboard");
 // let headerFade = document.getElementsByClassName("header");
 
@@ -24,54 +24,57 @@ getComputerChoice();
 function convertToWord(letter) {
   if (letter === "r") return "Rock ";
   if (letter === "p") return "Paper ";
-  return "Scissors";
+  return "Scissors ";
 }
 
 function win(userChoice, computerChoice) {
   userScore++;
-  userScore_span.innerHTML = userScore;
-  computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML =
+  $(userScore_span).text(userScore);
+  $(computerScore_span).text(computerScore);
+  $(result_p).text(
     convertToWord(userChoice) +
-    " beats " +
-    convertToWord(computerChoice) +
-    " You win!";
+      " beats " +
+      convertToWord(computerChoice) +
+      " You win!"
+  );
 
   if (userScore === 10) {
     alert("You Have Won The Game!");
-    userScore_span.innerHTML = 0;
-    computerScore_span.innerHTML = 0;
+    $(userScore_span).text(0);
+    $(computerScore_span).text(0);
     userScore = 0;
     computerScore = 0;
   }
 }
 function lose(userChoice, computerChoice) {
   computerScore++;
-  computerScore_span.innerHTML = computerScore;
-  userScore_span.innerHTML = userScore;
-  result_p.innerHTML =
+  $(computerScore_span).text(computerScore);
+  $(userScore_span).text(userScore);
+  $(result_p).text(
     convertToWord(userChoice) +
-    " loses to " +
-    convertToWord(computerChoice) +
-    " You lose!";
+      " loses to " +
+      convertToWord(computerChoice) +
+      " You lose!"
+  );
 
   if (computerScore === 10) {
     alert("You Have Lost The Game😢");
-    computerScore_span.innerHTML = 0;
-    userScore_span.innerHTML = 0;
+    $(computerScore_span).text(0);
+    $(userScore_span).text(0);
     computerScore = 0;
     userScore = 0;
   }
 }
 
 function draw(userChoice, computerChoice) {
-  computerScore_span.innerHTML = computerScore;
-  userScore_span.innerHTML = userScore;
-  result_p.innerHTML =
+  $(computerScore_span).text(computerScore);
+  $(userScore_span).text(userScore);
+  $(result_p).text(
     convertToWord(userChoice) +
-    " ties to " +
-    convertToWord(computerChoice) +
-    " It's a draw!";
+      " ties to " +
+      convertToWord(computerChoice) +
+      " It's a draw!"
+  );
 }
 
 function game(userChoice) {
@@ -97,13 +100,13 @@ function game(userChoice) {
 game();
 
 function main() {
-  rock_div.addEventListener("click", function() {
+  $(rock_div).on("click", function() {
     game("r");
   });
-  paper_div.addEventListener("click", function() {
+  $(paper_div).on("click", function() {
     game("p");
   });
-  scissors_div.addEventListener("click", function() {
+  $(scissors_div).on("click", function() {
     game("s");
   });
 }
@@ -111,9 +114,9 @@ function main() {
 main();
 
 function restartGame() {
-  restart_button.addEventListener("click", function() {
-    computerScore_span.innerHTML = 0;
-    userScore_span.innerHTML = 0;
+  $(restart_button).on("click", function() {
+    $(computerScore_span).text(0);
+    $(userScore_span).text(0);
     computerScore = 0;
     userScore = 0;
   });
@@ -122,9 +125,9 @@ function restartGame() {
 restartGame();
 
 function startGame() {
-  playGameButton.addEventListener("click", function() {
-    introScreen.classList.add("fadeOut");
-    match.classList.add("fadeIn");
+  $(playGameButton).on("click", function() {
+    $(introScreen).addClass("fadeOut");
+    $(match).addClass("fadeIn");
     // scoreBoardfade.classList.add("fadeIn");
     // headerFade.classList.add("fadeIn");
   });
