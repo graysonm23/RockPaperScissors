@@ -71,13 +71,13 @@ connectionsRef.on("value", function(snap) {
   //   viewersChoiceFb = snap.numChildren(),
   //   viewersChoiceFb: viewersChoice
   // });
-  if (snap.numChildren() >= 2) {
-    console.log("hi im a viewer");
-    $(".playbutton").show();
-  } else if (snap.numChildren() <= 1) {
-    console.log(viewers);
-    $(".playbutton").hide();
-  }
+  // if (snap.numChildren() >= 2) {
+  //   console.log("hi im a viewer");
+  //   $(".playbutton").show();
+  // } else if (snap.numChildren() <= 1) {
+  //   console.log(viewers);
+  //   $(".playbutton").hide();
+  // }
 });
 
 let userScore = 0;

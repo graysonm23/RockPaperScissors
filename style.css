@@ -143,13 +143,27 @@ button:focus {
 }
 
 #introbutton {
+  position: absolute;
   display: block;
-  top: 70%;
-  left: 30%;
+  left: 100px;
+  flex: 2;
+  /* flex-direction: inherit; */
+  /* top: 70%;
+  left: 30%; */
+}
+
+#buttons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 #meetdev {
+  position: absolute;
   display: block;
+  flex: 2;
+  /* flex-direction: inherit; */
+  /* right: 300px; */
   top: 70%;
   left: 60%;
 }
@@ -181,4 +195,11 @@ div.fadeIn {
   top: 20%;
   max-width: 30%;
   background: white;
+}
+
+@media screen and (min-width: 721px) {
+  #introbutton {
+    top: 70%;
+    left: 30%;
+  }
 }
