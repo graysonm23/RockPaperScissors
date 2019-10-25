@@ -143,14 +143,15 @@ button:focus {
 }
 
 #introbutton {
-  position: absolute;
+  display: block;
+  top: 70%;
   left: 30%;
-  top: 60%;
 }
+
 #meetdev {
-  position: absolute;
+  display: block;
+  top: 70%;
   left: 60%;
-  top: 60%;
 }
 
 .introductionbtns:hover {
@@ -176,7 +177,8 @@ div.fadeIn {
 }
 
 #views {
+  text-align: center;
   top: 20%;
-  max-width: 10%;
+  max-width: 30%;
   background: white;
 }

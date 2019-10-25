@@ -1,6 +1,7 @@
 // Initialize Firebase
 var userScoreFb;
 var computerScoreFb;
+var viewerChoice;
 const config = {
   apiKey: "AIzaSyAQn-RII-8-qJAoKSe49bUHYMXHxhpeRtU",
   authDomain: "rock-paper-scissors-gm.firebaseapp.com",
@@ -66,11 +67,16 @@ connectionsRef.on("value", function(snap) {
   let viewers = $("#viewers");
   $(viewers).text(snap.numChildren());
   parseInt(viewers);
-  console.log(viewers.length);
-  if (viewers < 2) {
-    $("#introbutton").hide();
-  } else {
-    $("#introbutton").show();
+  // database.ref().set({
+  //   viewersChoiceFb = snap.numChildren(),
+  //   viewersChoiceFb: viewersChoice
+  // });
+  if (snap.numChildren() >= 2) {
+    console.log("hi im a viewer");
+    $(".playbutton").show();
+  } else if (snap.numChildren() <= 1) {
+    console.log(viewers);
+    $(".playbutton").hide();
   }
 });
 
