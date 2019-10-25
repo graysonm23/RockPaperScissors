@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script> -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
@@ -11,12 +17,12 @@
     <header class="header">
       <h1>Rock Paper Scissors</h1>
     </header>
-
     <div id="scoreboard" class="score">
       <div id="usertag" class="badge">user</div>
       <div id="computertag" class="badge">comp</div>
       <span id="user-score">0</span>:<span id="computer-score">0</span>
     </div>
+    <div id="views"><span id="viewers"></span> people are connected!</div>
     <div class="intro">
       <h1>Rock, Paper, and Scissors</h1>
       <button class="introductionbtns" id="introbutton">Let's Play</button>
@@ -51,6 +57,7 @@
         <img id="restart" src="images/restart.png" alt="restart" />
       </button>
     </div>
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

@@ -174,3 +174,9 @@ div.fadeIn {
   pointer-events: none;
   transition: 1s ease 1s;
 }
+
+#views {
+  top: 20%;
+  max-width: 10%;
+  background: white;
+}
